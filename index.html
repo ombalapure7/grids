@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grids</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 1rem;
+    }
+
+    .item {
+      height: 20rem;
+      transition: all 1s;
+    }
+
+    .item:hover {
+      transform: scale(1.03, 1.03);
+    }
+
+    .item img {
+      height: 100%;
+      width: 100%;
+    }
+
+    /* reduce image heights */
+    @media (max-width: 1200px) {
+      .item {
+        height: 18rem;
+      }
+    }
+
+    /* transform to 2 X 3 grid */
+    @media (max-width: 1000px) {
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 1rem;
+      }
+
+      .item {
+        height: 20rem;
+      }
+
+      .item img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    /* create a 1 X 6 grid */
+    @media (max-width: 600px) {
+      .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-gap: 1rem;
+      }
+
+      .item {
+        height: 20rem;
+      }
+
+      .item img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item item-1">
+      <img
+        src="https://images.unsplash.com/photo-1631028818807-eeda453493ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=673&q=80"
+        alt="Scenary">
+    </div>
+    <div class="item item-2">
+      <img
+        src="https://images.unsplash.com/photo-1630980260348-16f484cb6471?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
+        alt="Scenary">
+    </div>
+    <div class="item item-3">
+      <img
+        src="https://images.unsplash.com/photo-1568345238017-66a6d7c4d2e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+        alt="Scenary">
+    </div>
+    <div class="item item-4">
+      <img
+        src="https://images.unsplash.com/photo-1489832049190-666d39b40b7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80"
+        alt="Scenary">
+    </div>
+    <div class="item item-5">
+      <img
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1506&q=80"
+        alt="Scenary">
+    </div>
+    <div class="item item-6">
+      <img
+        src="https://images.unsplash.com/photo-1631027761930-bc3bcfd2be74?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+        alt="Scenary">
+    </div>
+  </div>
+</body>
+
+</html>
